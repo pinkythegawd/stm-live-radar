@@ -50,7 +50,7 @@ avec un sélecteur FR/EN persistant**.
 ## ✨ Points forts
 
 - **🚌 Carte en direct** — tous les véhicules STM actifs, colorés selon le type
-  de réseau : Local (10–249), Nuit (300s), Express (400s), Navette/747 (700+).
+  de réseau : Local (10–249), Nuit (300s), Express (400s, violet), Navette/747 (700+).
 - **⚡ Actualisation toutes les 15 secondes** sans réinitialiser la vue ni le zoom.
 - **⏱️ Anneau de compte à rebours + synchronisation forcée** avec un cache
   serveur de 8 secondes.
@@ -343,7 +343,8 @@ la locale à l'ensemble `SUPPORTED`.
 ### 🎨 Design system
 
 - Base : `#0f172a` / surface `#1e293b`, cyan STM `#009ee0`
-- Express émeraude, nuit indigo, navette or, brand rose `#ec4899`
+- Express violet `#a855f7` (réseau haute fréquence), nuit indigo, navette or,
+  brand rose `#ec4899`
 - Typographie : display condensé pour la marque, monospace pour la télémétrie
 - Bureau : panneau fixe de 404 px + carte plein écran ; se replie en panneau
   inférieur ≤ 900 px

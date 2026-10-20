@@ -49,7 +49,7 @@ default — with a persistent EN/FR switch**.
 ## ✨ Highlights
 
 - **🚌 Live map** — every active STM vehicle, colored by network type:
-  Local (10–249), Night (300s), Express (400s), Shuttle/747 (700+).
+  Local (10–249), Night (300s), Express (400s, purple), Shuttle/747 (700+).
 - **⚡ 15-second polling** that never resets your viewport or zoom.
 - **⏱️ Countdown ring + Force Sync** with an 8-second server-side cache.
 - **🛰️ Smooth marker glide** between GPS frames. Markers and open popups persist
@@ -327,7 +327,8 @@ set.
 ### 🎨 Design system
 
 - Base: `#0f172a` / surface `#1e293b`, STM cyan `#009ee0`
-- Express emerald, night indigo, shuttle gold, branding pink `#ec4899`
+- Express purple `#a855f7` (high-frequency network), night indigo, shuttle gold,
+  branding pink `#ec4899`
 - Typography: condensed display for branding, monospace for telemetry
 - Desktop: fixed 404 px sidebar + full map; collapses to a bottom sheet ≤ 900 px
 - Keyboard: `/` search, `F` force sync, `Esc` close drawers/sheets

@@ -21,7 +21,7 @@ export const OCCUPANCY_LABELS = {
 export const ROUTE_CATEGORIES = {
   local: { key: 'local', label: 'Local', color: '#009ee0' },
   night: { key: 'night', label: 'Night', color: '#6366f1' },
-  express: { key: 'express', label: 'Express', color: '#10b981' },
+  express: { key: 'express', label: 'Express', color: '#a855f7' },
   shuttle: { key: 'shuttle', label: 'Shuttle', color: '#f59e0b' },
 };
 

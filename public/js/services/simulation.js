@@ -242,7 +242,7 @@ const ROUTE_DEFS = [
 function categoryFor(routeId) {
   const n = Number.parseInt(routeId, 10);
   if (n >= 700) return { key: 'shuttle', color: '#f59e0b' };
-  if (n >= 400) return { key: 'express', color: '#10b981' };
+  if (n >= 400) return { key: 'express', color: '#a855f7' };
   if (n >= 300) return { key: 'night', color: '#6366f1' };
   if (n >= 250) return { key: 'shuttle', color: '#f59e0b' };
   return { key: 'local', color: '#009ee0' };
