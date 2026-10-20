@@ -1,0 +1,23 @@
+# Dependencies (none required, but keep the folder clean if added)
+node_modules/
+
+# Environment secrets — never commit real API keys
+.env
+.env.*
+!.env.example
+
+# Vercel project metadata
+.vercel/
+
+# Generated GTFS static archive cache (route metadata JSON is committed)
+server/data/gtfs_stm.zip
+
+# Logs & OS cruft
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/

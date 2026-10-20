@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="STM Live Radar">
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <g fill="none" stroke="#009ee0" stroke-width="2.2" opacity="0.8">
+    <circle cx="32" cy="32" r="21"/>
+    <circle cx="32" cy="32" r="13" opacity="0.65"/>
+  </g>
+  <path d="M32 32 47 20" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="4.5" fill="#ec4899"/>
+  <rect x="18" y="37" width="20" height="12" rx="3.5" fill="#009ee0"/>
+  <rect x="21" y="40" width="14" height="4" rx="1.4" fill="#0f172a"/>
+  <circle cx="23" cy="47" r="2" fill="#0f172a"/>
+  <circle cx="33" cy="47" r="2" fill="#0f172a"/>
+</svg>

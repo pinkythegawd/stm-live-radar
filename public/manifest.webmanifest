@@ -1,0 +1,27 @@
+{
+  "name": "STM Live Radar — télémétrie des bus de Montréal",
+  "short_name": "STM Radar",
+  "description": "Positions, lignes, vitesses, occupation et avis de service des bus STM en temps réel sur une carte sombre de Montréal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "fr-CA",
+  "categories": ["navigation", "travel", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Never upload secrets or local-only artifacts to Vercel.
+.env
+.env.*
+!.env.example
+.git/
+.vercel/
+node_modules/
+server/data/gtfs_stm.zip
+*.log

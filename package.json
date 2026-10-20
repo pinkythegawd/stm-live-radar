@@ -1,0 +1,26 @@
+{
+  "name": "stm-live-radar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time STM bus radar for Montreal. Zero-dependency Node server + Leaflet dashboard, powered by the STM real-time API by pinkythegawd (MikePinku).",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "routes:build": "node server/tools/build-route-meta.js",
+    "feed:inspect": "node server/tools/inspect-feed.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "stm",
+    "montreal",
+    "gtfs-realtime",
+    "leaflet",
+    "transit",
+    "real-time"
+  ],
+  "author": "STM Live Radar",
+  "license": "MIT"
+}
