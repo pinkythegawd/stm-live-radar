@@ -41,7 +41,7 @@ avec un sélecteur FR/EN persistant**.
 ## 📸 Aperçu en direct
 
 <div align="center">
-  <img src="docs/screenshot.png" alt="Tableau de bord STM Live Radar en production avec les bus en direct, les filtres de lignes et les avis de service" width="100%">
+  <img src="docs/screenshot.jpg" alt="Tableau de bord STM Live Radar en production avec les bus en direct, les filtres de lignes et les avis de service" width="100%">
   <sub>Tableau de bord en production — bus en direct, filtres de lignes, télémétrie et interface française.</sub>
 </div>
 
@@ -318,7 +318,7 @@ public/
 
 docs/
   readme-banner.svg     En-tête personnalisé du README
-  screenshot.png        Capture de la production
+  screenshot.jpg        Capture de la production
 
 test/
   upstream.test.js      Tests des tentatives, délais et Retry-After

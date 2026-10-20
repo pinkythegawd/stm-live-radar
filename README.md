@@ -40,7 +40,7 @@ default — with a persistent EN/FR switch**.
 ## 📸 Live at a glance
 
 <div align="center">
-  <img src="docs/screenshot.png" alt="STM Live Radar production dashboard showing live buses, route filters and service alerts" width="100%">
+  <img src="docs/screenshot.jpg" alt="STM Live Radar production dashboard showing live buses, route filters and service alerts" width="100%">
   <sub>Production dashboard — live buses, route filters, telemetry and the French-first interface.</sub>
 </div>
 
@@ -303,7 +303,7 @@ public/
 
 docs/
   readme-banner.svg     Custom README header
-  screenshot.png        Live production screenshot
+  screenshot.jpg        Live production screenshot
 
 test/
   upstream.test.js      Retry, timeout and Retry-After tests
