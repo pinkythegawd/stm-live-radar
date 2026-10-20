@@ -5,5 +5,6 @@
 .git/
 .vercel/
 node_modules/
+test/
 server/data/gtfs_stm.zip
 *.log

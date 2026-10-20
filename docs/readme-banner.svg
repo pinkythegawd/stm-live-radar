@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">STM Live Radar — Montréal real-time bus map</title>
+  <desc id="desc">Dark transit-themed banner with a bus icon, radar rings, route lines, emojis and bilingual French-English branding.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07101f"/>
+      <stop offset="0.55" stop-color="#0d1a2e"/>
+      <stop offset="1" stop-color="#111c33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#009ee0" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#009ee0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#009ee0"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="bus" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#009ee0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7dd3fc" stroke-width="1" opacity="0.08"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="frame">
+      <rect x="0" y="0" width="1200" height="340" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+    <circle cx="108" cy="108" r="250" fill="url(#glow)"/>
+    <circle cx="1050" cy="250" r="240" fill="url(#glow)" opacity="0.6"/>
+
+    <!-- Stylized transit lines -->
+    <path d="M 690 300 C 760 230, 760 140, 860 112 S 1060 78, 1160 44" fill="none" stroke="url(#route)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 720 330 C 810 270, 900 245, 985 258 S 1120 220, 1190 180" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 13" opacity="0.7"/>
+    <path d="M 650 230 C 740 210, 790 260, 900 285 S 1080 300, 1160 270" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 10" opacity="0.55"/>
+    <g fill="#22d3ee">
+      <circle cx="690" cy="300" r="5"/><circle cx="860" cy="112" r="5"/><circle cx="1040" cy="70" r="5"/>
+    </g>
+    <g fill="#ec4899">
+      <circle cx="900" cy="285" r="5"/><circle cx="1065" cy="238" r="5"/>
+    </g>
+
+    <!-- Radar rings -->
+    <g fill="none" stroke="#22d3ee" opacity="0.5">
+      <circle cx="108" cy="122" r="66" stroke-width="2"/>
+      <circle cx="108" cy="122" r="88" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.6"/>
+      <circle cx="108" cy="122" r="110" stroke-width="1" stroke-dasharray="2 12" opacity="0.45"/>
+    </g>
+    <path d="M 108 122 L 172 68" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Bus icon -->
+    <rect x="62" y="76" width="92" height="92" rx="24" fill="#0b2238" stroke="#22d3ee" stroke-width="3" filter="url(#softGlow)"/>
+    <g fill="none" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="82" y="94" width="52" height="40" rx="8"/>
+      <path d="M 82 112 H 134"/>
+      <path d="M 92 134 V 142 M 124 134 V 142"/>
+      <circle cx="94" cy="112" r="2.5" fill="#e0f2fe" stroke="none"/>
+      <circle cx="122" cy="112" r="2.5" fill="#e0f2fe" stroke="none"/>
+    </g>
+    <rect x="92" y="100" width="32" height="6" rx="3" fill="#22d3ee"/>
+
+    <!-- Branding -->
+    <text x="184" y="118" fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="1">STM LIVE RADAR</text>
+    <rect x="186" y="132" width="196" height="6" rx="3" fill="url(#bus)"/>
+    <text x="186" y="166" fill="#7dd3fc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">MONTRÉAL · TEMPS RÉEL</text>
+    <text x="186" y="190" fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" letter-spacing="2">LIVE TRANSIT · GTFS-REALTIME · LEAFLET</text>
+
+    <!-- Live badge -->
+    <g transform="translate(186 214)">
+      <rect width="112" height="30" rx="15" fill="#052e1b" stroke="#22c55e" stroke-width="1.5"/>
+      <circle cx="18" cy="15" r="5" fill="#22c55e"/>
+      <text x="32" y="20" fill="#86efac" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">EN DIRECT</text>
+    </g>
+
+    <!-- Emoji / feature pills -->
+    <g font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',Inter,Arial,sans-serif" font-size="14" font-weight="600">
+      <g transform="translate(314 214)">
+        <rect width="138" height="30" rx="15" fill="#0b2238" stroke="#1e4b68"/>
+        <text x="14" y="20" fill="#bae6fd">🚌 640 bus</text>
+      </g>
+      <g transform="translate(462 214)">
+        <rect width="160" height="30" rx="15" fill="#0b2238" stroke="#1e4b68"/>
+        <text x="14" y="20" fill="#bae6fd">⚡ 15 secondes</text>
+      </g>
+      <g transform="translate(632 214)">
+        <rect width="150" height="30" rx="15" fill="#0b2238" stroke="#1e4b68"/>
+        <text x="14" y="20" fill="#bae6fd">📍 Montréal</text>
+      </g>
+    </g>
+
+    <!-- Bilingual pill -->
+    <g transform="translate(186 262)">
+      <rect width="232" height="32" rx="16" fill="#1e293b" stroke="#334155"/>
+      <text x="16" y="21" fill="#f1f5f9" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',Inter,Arial,sans-serif" font-size="14" font-weight="600">🌍 Français  ·  English</text>
+    </g>
+
+    <!-- Right-side map card -->
+    <g transform="translate(830 58)">
+      <rect width="300" height="196" rx="22" fill="#081426" stroke="#1e4b68" stroke-width="1.5"/>
+      <rect x="1" y="1" width="298" height="194" rx="21" fill="url(#grid)" opacity="0.7"/>
+      <text x="20" y="30" fill="#7dd3fc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">RÉSEAU EN DIRECT</text>
+      <path d="M 28 150 C 70 120, 78 74, 132 82 S 210 150, 270 104" fill="none" stroke="url(#route)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 28 168 C 98 160, 144 178, 270 140" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9"/>
+      <g fill="#0b2238" stroke="#22d3ee" stroke-width="2">
+        <circle cx="28" cy="150" r="7"/>
+        <circle cx="132" cy="82" r="7"/>
+        <circle cx="270" cy="104" r="7"/>
+      </g>
+      <g fill="#f8fafc" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">
+        <text x="28" y="120">10</text>
+        <text x="124" y="62">24</text>
+        <text x="248" y="84">747</text>
+      </g>
+      <g fill="#94a3b8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11">
+        <text x="20" y="182">210 lignes · 640 véhicules · 15 s</text>
+      </g>
+      <circle cx="258" cy="28" r="5" fill="#22c55e"/>
+      <text x="270" y="33" fill="#86efac" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">LIVE</text>
+    </g>
+
+    <!-- Footer credit -->
+    <text x="186" y="318" fill="#64748b" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1.5">POWERED BY STM OPEN DATA · BUILT BY PINKYTHEGAWD</text>
+    <text x="1116" y="318" fill="#475569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1">MONTRÉAL · CANADA</text>
+  </g>
+  <rect x="1" y="1" width="1198" height="338" rx="27" fill="none" stroke="#1e4b68" stroke-width="2"/>
+</svg>

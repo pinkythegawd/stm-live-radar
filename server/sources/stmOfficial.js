@@ -7,6 +7,7 @@
 
 const config = require('../config');
 const { decodeFeed } = require('../lib/gtfsRt');
+const { fetchWithRetry } = require('../lib/upstream');
 const {
   getRouteCategory,
   headingToCompass,
@@ -89,14 +90,22 @@ async function fetchVehicles() {
 
   let res;
   try {
-    res = await fetch(config.stm.vehiclePositionsUrl, {
-      headers: {
-        apiKey: config.stm.apiKey,
-        Accept: 'application/x-protobuf',
-        'User-Agent': 'STM-Live-Radar/1.0',
+    res = await fetchWithRetry(
+      config.stm.vehiclePositionsUrl,
+      {
+        headers: {
+          apiKey: config.stm.apiKey,
+          Accept: 'application/x-protobuf',
+          'User-Agent': 'STM-Live-Radar/1.0',
+        },
       },
-      signal: AbortSignal.timeout(config.stm.timeoutMs),
-    });
+      {
+        attempts: config.stm.retryAttempts,
+        timeoutMs: config.stm.timeoutMs,
+        baseDelayMs: config.stm.retryBaseDelayMs,
+        maxDelayMs: config.stm.retryMaxDelayMs,
+      },
+    );
   } catch (err) {
     throw new UpstreamError(`STM feed unreachable: ${err.message}`);
   }
@@ -119,6 +128,9 @@ async function fetchVehicles() {
   }
 
   const vehicles = [...byId.values()].slice(0, config.limits.maxVehicles);
+  if (!vehicles.length) {
+    throw new UpstreamError('STM feed returned no usable vehicles');
+  }
 
   return {
     vehicles,

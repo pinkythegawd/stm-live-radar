@@ -7,6 +7,7 @@
 
 const crypto = require('node:crypto');
 const config = require('../config');
+const { fetchWithRetry } = require('../lib/upstream');
 
 const SEVERE_PATTERN = /(annul|cancel|interromp|disrupt|suspend|ferme|closed|détour|detour|retard|delay|panne|outage)/i;
 
@@ -124,14 +125,22 @@ async function fetchAlerts() {
 
   let res;
   try {
-    res = await fetch(config.stm.serviceStatusUrl, {
-      headers: {
-        apiKey: config.stm.apiKey,
-        Accept: 'application/json',
-        'User-Agent': 'STM-Live-Radar/1.0',
+    res = await fetchWithRetry(
+      config.stm.serviceStatusUrl,
+      {
+        headers: {
+          apiKey: config.stm.apiKey,
+          Accept: 'application/json',
+          'User-Agent': 'STM-Live-Radar/1.0',
+        },
       },
-      signal: AbortSignal.timeout(config.stm.timeoutMs),
-    });
+      {
+        attempts: config.stm.retryAttempts,
+        timeoutMs: config.stm.timeoutMs,
+        baseDelayMs: config.stm.retryBaseDelayMs,
+        maxDelayMs: config.stm.retryMaxDelayMs,
+      },
+    );
   } catch (err) {
     throw new Error(`Service status unreachable: ${err.message}`);
   }

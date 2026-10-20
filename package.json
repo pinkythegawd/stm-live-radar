@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "node server/index.js",
+    "test": "node --test",
     "routes:build": "node server/tools/build-route-meta.js",
     "feed:inspect": "node server/tools/inspect-feed.js"
   },

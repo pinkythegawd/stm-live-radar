@@ -35,6 +35,9 @@ module.exports = {
     tripUpdatesUrl: 'https://api.stm.info/pub/od/gtfs-rt/ic/v2/tripUpdates',
     serviceStatusUrl: 'https://api.stm.info/pub/od/i3/v2/messages/etatservice',
     timeoutMs: int(process.env.STM_TIMEOUT_MS, 12000),
+    retryAttempts: int(process.env.STM_RETRY_ATTEMPTS, 2),
+    retryBaseDelayMs: int(process.env.STM_RETRY_BASE_MS, 400),
+    retryMaxDelayMs: int(process.env.STM_RETRY_MAX_MS, 1500),
   },
 
   /**
